@@ -1,8 +1,8 @@
 /* Backgrounds */
 .red-bg{
   background-color: rgb(254, 72, 133);
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   position: absolute;
   left: 20vw;
   border-radius: 100%;
@@ -11,8 +11,8 @@
 }
 .blue-bg{
   background-color: rgb(75, 235, 253);
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   position: absolute;
   top: 30vh;
   right: 20vw;
@@ -196,7 +196,6 @@
   }
 
   .login-container {
-    width: 95%;
     padding: 12px;
   }
 
@@ -204,12 +203,4 @@
     font-size: 22px;
   }
 
-  .email-input, .password-input {
-    padding: 6px;
-  }
-
-  .login-btn {
-    width: 70px;
-    padding: 6px;
-  }
 }
