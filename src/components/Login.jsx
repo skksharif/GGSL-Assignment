@@ -12,6 +12,8 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+
+  //Login Handling Function
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true); // Start loading
@@ -26,7 +28,7 @@ const Login = () => {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.token); //Saving the token.
         toast.success("Welcome to Global Groupware!");
         navigate("/users");
       } else {

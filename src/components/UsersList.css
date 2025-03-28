@@ -1,20 +1,19 @@
-/* Navbar */
+/* Navbar  with LOGO text and Logout Button*/
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
-  position: sticky;
-  top: 0;
   background-color: #acacac3a;
   backdrop-filter: blur(10px);
   color: rgb(60, 60, 60);
 }
-
-/* Logout Button */
+.navbar h2{
+  font-size: 28px;
+}
 .logout-btn {
-  padding: 5px 9px;
-  font-size: 12px;
+  padding: 5px 10px;
+  font-size: 14px;
   border-radius: 5px;
   background-color: red;
   color: white;
@@ -22,24 +21,39 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .logout-btn:hover {
   background-color: darkred;
 }
 
-/* Page Title */
-.page-title {
-  text-align: center;
-  margin-top: 20px;
-}
+/* Users Container with Search Input and Cards */
 .users-main {
   background: linear-gradient(45deg, pink, white, skyblue);
   min-height: 100vh;
   padding-bottom: 15px;
 }
-
-/* Users Grid */
-.users-grid {
+/* 1. Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+.search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+/* No results found message */
+.no-results {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+  margin-top: 20px;
+}
+/* 2. Users */
+.users-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -48,8 +62,6 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* User Card */
 .user-card {
   flex: 1 1 calc(33.333% - 40px);
   max-width: calc(33.333% - 40px);
@@ -72,27 +84,33 @@
   border-radius: 50%;
   margin-bottom: 10px;
 }
-
+.user-name{
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(48, 48, 48);
+}
+.user-email{
+  font-size: 14px;
+  color: rgb(61, 61, 61);
+}
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
   .user-card {
-    flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+    flex: 1 1 calc(50% - 40px);
     max-width: calc(50% - 40px);
   }
 }
-
 @media (max-width: 768px) {
   .user-card {
-    flex: 1 1 calc(100% - 40px); /* 1 card per row */
+    flex: 1 1 calc(100% - 40px);
     max-width: calc(100% - 40px);
   }
 }
 
-/* User Actions */
+/* Buttons in the user Card */
 .user-actions {
   margin-top: 10px;
 }
-
 .edit-btn,
 .delete-btn {
   margin: 5px;
@@ -101,24 +119,21 @@
   cursor: pointer;
   border-radius: 5px;
 }
-
 .edit-btn {
-  background-color: #4caf50;
+  background-color: #74cf77;
   color: white;
 }
-
 .edit-btn:hover {
-  background-color: #45a049;
+  background-color: #48c54e;
 }
-
 .delete-btn {
-  background-color: #f44336;
+  background-color: #d97e78;
   color: white;
 }
-
 .delete-btn:hover {
   background-color: #d32f2f;
 }
+
 /* Loader Animation */
 .loader {
   width: 16px;
@@ -140,8 +155,7 @@
     transform: rotate(360deg);
   }
 }
-
-/* Disable button when   */
+/* Disable button when Loading Action*/
 .save-btn:disabled {
   background-color: #a5d6a7;
   cursor: not-allowed;
@@ -158,9 +172,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin:0 0 20px 0;
 }
-
 .pagination button {
   padding: 8px 12px;
   margin: 0 10px;
@@ -170,23 +183,22 @@
   cursor: pointer;
   border-radius: 5px;
 }
-
 .pagination button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+/* Upadting User form */
 .edit-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
 .edit-form input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
 .save-btn,
 .cancel-btn {
   padding: 8px 12px;
@@ -195,24 +207,21 @@
   border-radius: 5px;
   margin-top: 5px;
 }
-
 .save-btn {
   background-color: #4caf50;
   color: white;
 }
-
 .save-btn:hover {
   background-color: #45a049;
 }
-
 .cancel-btn {
   background-color: #f44336;
   color: white;
 }
-
 .cancel-btn:hover {
   background-color: #d32f2f;
 }
+/* Loader for Save Option After Updating User */
 .spinner {
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-left-color: #000;
@@ -224,37 +233,12 @@
   vertical-align: middle;
   margin-right: 8px;
 }
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
-
 .save-btn:disabled {
   cursor: not-allowed;
   opacity: 0.7;
-}
-/* Search Bar */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin: 15px 0;
-}
-
-.search-input {
-  width: 60%;
-  max-width: 400px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-/* No results found message */
-.no-results {
-  text-align: center;
-  font-size: 16px;
-  color: red;
-  margin-top: 20px;
 }

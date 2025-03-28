@@ -21,16 +21,16 @@
   z-index: -1;
 }
 
-/*Heading */
+/*Main Title - Global Groupware Solutions Limited */
 .main-title{
   font-size: 42px;
-  font-weight: 300;
+  font-weight: 200;
   text-shadow: 0px 5px 8px#7a7a7a;
   text-align: center;
   margin-top: 40px;
 }
 
-
+/* Login Container */
 .login-container {
   width: 400px;
   margin: 50px auto;
@@ -74,12 +74,10 @@
   cursor: pointer;
   color: #666;
 }
-
 .error {
   color: red;
   font-size: 14px;
 }
-
 .login-btn {
   width: 100px;
   padding: 10px;
@@ -95,11 +93,11 @@
   justify-content: center;
   margin: 0 auto;
 }
-
 .login-btn:hover {
   background-color: #5ae25c;
 }
-/* Loader Animation */
+
+/* Login Button Loader Animation */
 .loader {
   width: 20px;
   height: 20px;

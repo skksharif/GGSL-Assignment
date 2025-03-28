@@ -20,6 +20,8 @@ const UsersList = () => {
     fetchUsers(page);
   }, [page]);
 
+
+  // Fetching Users Based on Page Number ( Note : 1 and 2 only)
   const fetchUsers = async (pageNumber) => {
     setLoading(true);
     try {
@@ -33,23 +35,29 @@ const UsersList = () => {
     setLoading(false);
   };
 
+  //Just Clearing token and Navigating to Login Page to Logout
   const handleLogout = () => {
     toast.success("Good Bye!");
+    
+    //setTimeout() used for delaying the navigation to show the toast message.
     setTimeout(() => {
       localStorage.removeItem("token");
       navigate("/");
     }, 1500);
   };
 
+  // On Clicking Edit button 
   const handleEditClick = (user) => {
-    setEditingUser(user.id);
+    setEditingUser(user.id); // Setting the editingUser with user id
     setEditForm({ first_name: user.first_name, last_name: user.last_name, email: user.email });
   };
 
+ //Taking Input for updating a user
   const handleEditChange = (e) => {
     setEditForm({ ...editForm, [e.target.name]: e.target.value });
   };
 
+  // Final Saving after Updating user  through edit form
   const handleEditSave = async (id) => {
     setIsSaving(true);
     try {
@@ -72,6 +80,7 @@ const UsersList = () => {
     setIsSaving(false);
   };
 
+  //Deleting the user
   const handleDelete = async (id) => {
     setDeletingUsers(prevState => ({ ...prevState, [id]: true }));
     try {
@@ -91,7 +100,7 @@ const UsersList = () => {
     setDeletingUsers(prevState => ({ ...prevState, [id]: false }));
   };
 
-  // **Search Filter Function**
+  // Search Filter Function
   const filteredUsers = users.filter(user =>
     `${user.first_name} ${user.last_name} ${user.email}`
       .toLowerCase()
@@ -117,12 +126,15 @@ const UsersList = () => {
         />
       </div>
 
-      <div className="users-grid">
+      <div className="users-container">
         {filteredUsers.length > 0 ? (
           filteredUsers.map((user) => (
             <div key={user.id} className="user-card">
               <img src={user.avatar} alt={user.first_name} className="user-avatar" />
+
+              {/* Edit Form VS User Data*/}
               {editingUser === user.id ? (
+                
                 <div className="edit-form">
                   <input type="text" name="first_name" value={editForm.first_name} onChange={handleEditChange} />
                   <input type="text" name="last_name" value={editForm.last_name} onChange={handleEditChange} />
@@ -134,8 +146,8 @@ const UsersList = () => {
                 </div>
               ) : (
                 <>
-                  <h3>{user.first_name} {user.last_name}</h3>
-                  <p>{user.email}</p>
+                  <h3 className="user-name">{user.first_name} {user.last_name}</h3>
+                  <p className="user-email">{user.email}</p>
                   <div className="user-actions">
                     <button className="edit-btn" onClick={() => handleEditClick(user)}>Edit</button>
                     <button
@@ -155,6 +167,7 @@ const UsersList = () => {
         )}
       </div>
 
+      {/* Pagination Setup Upto 2 pages only */}
       <div className="pagination">
         <button disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</button>
         <span> Page {page} of {totalPages} </span>
