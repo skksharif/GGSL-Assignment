@@ -73,7 +73,7 @@ A React-based user management app that allows fetching, editing, deleting, and s
 ![alt text](/screenshots/image-6.png)
 
 ## 🎯 Conclusion
-This project meets all specified requirements, implementing core functionalities efficiently. I am seeking an internship role to apply my skills, contribute effectively, and gain hands-on experience. Looking forward to the opportunity! 🚀
+The project has been successfully completed as per the documentation, ensuring all required features are implemented efficiently. I am seeking an internship role to apply my skills, contribute effectively, and gain hands-on experience. Looking forward to the opportunity!
 
 ## AI Usage
  - I utilized ChatGPT for code optimization and structural enhancements while ensuring the logic and implementation remain my own.
