@@ -57,13 +57,19 @@ A React-based user management app that allows fetching, editing, deleting, and s
                **2.Search Option is Limited to Particular page only**
 
 ## 📸 Screenshots
-
+- Login Page
 ![alt text](/screenshots/image.png)
+- Users List
 ![alt text](/screenshots/image-1.png)
+- Updating User (George Bluth)
 ![alt text](/screenshots/image-2.png)
+- Updated user (George Bluth -> Khasim Sharif)
 ![alt text](/screenshots/image-3.png)
+- Searched for 'Charles'
 ![alt text](/screenshots/image-4.png)
+- Pagination
 ![alt text](/screenshots/image-5.png)
+- Deleting a user (Please Observe the Notification!)
 ![alt text](/screenshots/image-6.png)
 
 ## 🎯 Conclusion
