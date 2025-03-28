@@ -118,7 +118,7 @@ const UsersList = () => {
             Logout
           </button>
         </nav>
-        {loading && <p className="loading-text">Loading...</p>}
+        {loading && <center><h4 className="loading-text">Loading...</h4></center>}
 
         <div className="users-grid">
           {users.map((user) => (
