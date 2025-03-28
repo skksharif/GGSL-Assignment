@@ -35,6 +35,7 @@
 .users-main {
   background: linear-gradient(45deg, pink, white, skyblue);
   min-height: 100vh;
+  padding-bottom: 15px;
 }
 
 /* Users Grid */
@@ -62,11 +63,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease;
 }
-
 .user-card:hover {
   transform: translateY(-5px);
 }
-
 .user-avatar {
   width: 80px;
   height: 80px;
@@ -142,7 +141,7 @@
   }
 }
 
-/* Disable button when loading */
+/* Disable button when   */
 .save-btn:disabled {
   background-color: #a5d6a7;
   cursor: not-allowed;
@@ -235,4 +234,27 @@
 .save-btn:disabled {
   cursor: not-allowed;
   opacity: 0.7;
+}
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* No results found message */
+.no-results {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+  margin-top: 20px;
 }
