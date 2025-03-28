@@ -40,9 +40,10 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="red-bg"></div>
+    <div className="main">
       <div className="blue-bg"></div>
+      <div className="red-bg"></div>
+
       <ToastContainer />
 
       <h2 className="main-title">Global Groupware Solutions Limited</h2>
@@ -80,7 +81,7 @@ const Login = () => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 
