@@ -1,8 +1,8 @@
 /* Backgrounds */
 .red-bg{
   background-color: rgb(254, 72, 133);
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   position: absolute;
   left: 20vw;
   border-radius: 100%;
@@ -11,8 +11,8 @@
 }
 .blue-bg{
   background-color: rgb(75, 235, 253);
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   position: absolute;
   top: 30vh;
   right: 20vw;
@@ -155,12 +155,6 @@
 }
 
 @media (max-width: 768px) {
-  .red-bg, .blue-bg {
-    width: 250px;
-    height: 250px;
-    filter: blur(80px);
-  }
-
   .red-bg {
     left: 5vw;
   }
@@ -191,16 +185,8 @@
 
 @media (max-width: 480px) {
 
-  .main-title {
-    font-size: 24px;
-  }
-
   .login-container {
     padding: 12px;
-  }
-
-  .login-text {
-    font-size: 22px;
   }
 
 }
