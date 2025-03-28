@@ -18,7 +18,7 @@ A React-based user management app that allows fetching, editing, deleting, and s
 ## 🛠️ Tech Stack
 - React.js + Vite
 - React Toastify
-- Custom CSS
+- Custom CSS 
 - React Router
 - Fetch API
 - Reqres API
@@ -48,7 +48,6 @@ A React-based user management app that allows fetching, editing, deleting, and s
 
 3. Delete User: Click "Delete".
  
- **NOTE : Reqres AP resets on refresh**
 
 4. Search User: Use the search bar to filter users.
 
@@ -56,7 +55,6 @@ A React-based user management app that allows fetching, editing, deleting, and s
  **Assumptions :**
                **1.Reqres API Limitation – Data resets on page refresh as it is a test API.**
                **2.Search Option is Limited to Particular page only**
-               **3.Limited Search Scope – Search functionality works only on the currently loaded page, not across all pages.**
 
 ## 📸 Screenshots
 
